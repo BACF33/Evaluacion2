@@ -7,4 +7,4 @@ const specialitySchema = new mongoose.Schema(
         isAvailable: {Type: Boolean},
     }, {timestamps: true});
 
-module.exports = mongoose.model('Especialidad', specialitySchema)
+module.exports = mongoose.model('especialidad', specialitySchema)

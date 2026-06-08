@@ -27,4 +27,4 @@ const patientSchema = new mongoose.Schema(
         resetPasswordExpires: {Type: Date}
     }, {timestamps: true});
 
-module.exports = mongoose.model('Paciente', patientSchema)
+module.exports = mongoose.model('paciente', patientSchema)

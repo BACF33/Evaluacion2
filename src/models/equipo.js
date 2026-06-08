@@ -14,4 +14,4 @@ const equipmentSchema = new mongoose.Schema(
         isAvailable : {Type: Boolean},
     }, {timestamps: true});
 
-module.exports = mongoose.model('Equipo', equipmentSchema)
+module.exports = mongoose.model('equipo', equipmentSchema)

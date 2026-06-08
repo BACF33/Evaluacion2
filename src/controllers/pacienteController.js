@@ -21,7 +21,6 @@ const getAll = async(req, res) =>
     {
         const obje = await Paciente.find().populate;
         res.json(obje)
-        res.status(201).json({message: 'Creado'})
     }
     catch (error)
     {
