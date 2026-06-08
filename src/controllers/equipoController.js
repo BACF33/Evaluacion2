@@ -33,7 +33,7 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Equipo.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate()
+        const obje = await Equipo.findByIdAndUpdate(req.params.id, req.body, {new: true}).populate()
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
         res.json({message: 'Equipo actualizado', obje})

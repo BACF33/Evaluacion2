@@ -33,7 +33,7 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Expediente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate()
+        const obje = await Expediente.findByIdAndUpdate(req.params.id, req.body, {new: true}).populate()
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
         res.json({message: 'Expediente actualizado', obje})

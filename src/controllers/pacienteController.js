@@ -19,7 +19,7 @@ const getAll = async(req, res) =>
 {
     try
     {
-        const obje = await Paciente.find().populate;
+        const obje = await Paciente.find();
         res.json(obje)
     }
     catch (error)
@@ -32,7 +32,7 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Paciente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate()
+        const obje = await Paciente.findByIdAndUpdate(req.params.id, req.body, {new: true}).populate()
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
         res.json({message: 'Paciente actualizado', obje})

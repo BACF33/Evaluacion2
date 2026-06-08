@@ -1,13 +1,13 @@
 const express = require('express')
-const cors = ('cors')
-const connectDB = ('./database.js')
-const {PORT} = ('./config.js')
+const cors = require('cors')
+const connectDB = require('./database.js')
+const {PORT} = require('./config.js')
 
-const especialidadRoutes = require('./src/routes/especialidadRoutes');
-const equipoRoutes = require('./src/routes/equipoRoutes');
-const citaRoutes = require('./src/routes/citaRoutes');
-const expedienteRoutes = require('./src/routes/expedienteRoutes');
-const pacienteRoutes = require('./src/routes/pacienteRoutes');
+const especialidadRoutes = require('./src/routes/especialidadRoutes.js');
+const equipoRoutes = require('./src/routes/equipoRoutes.js');
+const citaRoutes = require('./src/routes/citaRoutes.js');
+const expedienteRoutes = require('./src/routes/expedienteRoutes.js');
+const pacienteRoutes = require('./src/routes/pacienteRoutes.js');
 
 const app = express();
 
