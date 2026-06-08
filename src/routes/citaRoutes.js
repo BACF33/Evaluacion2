@@ -3,6 +3,6 @@ const {create, getAll, update, remove} = require('../controllers/citaController'
 const {verifyToken} = require('../middlewares/auth')
 
 router.post('/', create)
-router.get('/cita/getAll', getAll)
-router.update('/cita/update', update)
-router.delete('/cita/remove', remove)
+router.get('/', getAll)
+router.update('/', update)
+router.delete('/', remove)
