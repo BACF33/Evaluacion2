@@ -1,7 +1,8 @@
-const routes = require('express').Router();
+const router = require('express').Router();
 const {create, getAll, update, remove} = require('../controllers/citaController')
+const {verifyToken} = require('../middlewares/auth')
 
-routes('/cita/create').post(create)
-routes('/cita/getAll').get(getAll)
-routes('/cita/update').put(update)
-routes('/cita/remove').delete(remove)
+router.post('/', create)
+router.get('/cita/getAll', getAll)
+router.update('/cita/update', update)
+router.delete('/cita/remove', remove)

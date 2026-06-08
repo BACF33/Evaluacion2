@@ -1,7 +1,8 @@
 const routes = require('express').Router();
 const {create, getAll, update, remove} = require('../controllers/especialidadController')
+const {verifyToken} = require('../middlewares/auth')
 
-routes('/especialidad/create').post(create)
-routes('/especialidad/getAll').get(getAll)
-routes('/especialidad/update').put(update)
-routes('/especialidad/remove').delete(remove)
+router.post('/especialidad/create', create)
+router.get('/especialidad/getAll', getAll)
+router.put('/especialidad/update', update)
+router.delete('/especialidad/remove', remove)

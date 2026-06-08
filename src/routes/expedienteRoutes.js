@@ -1,7 +1,8 @@
 const routes = require('express').Router();
 const {create, getAll, update, remove} = require('../controllers/expedienteController')
+const {verifyToken} = require('../middlewares/auth')
 
-routes('/expediente/create').post(create)
-routes('/expediente/getAll').get(getAll)
-routes('/expediente/update').put(update)
-routes('/expediente/remove').delete(remove)
+router.post('/expediente/create', create)
+router.get('/expediente/getAll', getAll)
+router.put('/expediente/update', update)
+router.delete('/expediente/remove', remove)
