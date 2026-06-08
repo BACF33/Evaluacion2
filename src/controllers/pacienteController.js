@@ -4,9 +4,9 @@ const create = async(req, res) =>
 {
     try
     {
-        const obje = new Expediente(req.body);
+        const obje = new Paciente(req.body);
         await obje.save();
-        const populated = await obje.populate()
+        await obje.populate('patient_id', 'name lastName email')
         res.status(201).json({message: 'Creado'})
     }
     catch (error)
@@ -19,7 +19,7 @@ const getAll = async(req, res) =>
 {
     try
     {
-        const obje = await Expediente.find().populate;
+        const obje = await Paciente.find().populate;
         res.json(obje)
         res.status(201).json({message: 'Creado'})
     }
@@ -33,25 +33,25 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Expediente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate('patient_id', 'name lastName email')
+        const obje = await Paciente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate('patient_id', 'name lastName email')
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
-        res.json({message: 'Expediente actualizado', obje})
+        res.json({message: 'Paciente actualizado', obje})
     }
     catch (error)
     {
         res.status(500).json({message: 'Error'})
     }
 }
-
+//Esta es una pruba
 const remove = async(req, res) =>
 {
     try
     {
-        const obje = await Expediente.findByIdAndDelete(req.params.id)
+        const obje = await Paciente.findByIdAndDelete(req.params.id)
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
-        res.json({message: 'Expediente actualizado', obje})
+        res.json({message: 'Paciente actualizado', obje})
     }
     catch (error)
     {
