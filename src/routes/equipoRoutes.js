@@ -3,6 +3,6 @@ const {create, getAll, update, remove} = require('../controllers/equipoControlle
 const {verifyToken} = require('../middlewares/auth')
 
 router.post('/', create)
-rrouter.get('/', getAll)
-rrouter.put('/', update)
-router.delete('/', remove)
+router.get('/', getAll)
+router.put('/', update)
+outer.delete('/', remove)

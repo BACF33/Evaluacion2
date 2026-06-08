@@ -6,7 +6,7 @@ const create = async(req, res) =>
     {
         const obje = new Expediente(req.body);
         await obje.save();
-        const populated = await obje.populate('patient_id', 'name lastName email')
+        const populated = await obje.populate()
         res.status(201).json({message: 'Creado'})
     }
     catch (error)
@@ -33,7 +33,7 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Expediente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate('patient_id', 'name lastName email')
+        const obje = await Expediente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate()
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
         res.json({message: 'Expediente actualizado', obje})

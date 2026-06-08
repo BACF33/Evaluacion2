@@ -33,7 +33,7 @@ const update = async(req, res) =>
 {
     try
     {
-        const obje = await Paciente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate('patient_id', 'name lastName email')
+        const obje = await Paciente.findByIdAndUpdate(req.params.id, req.body, {new: True}).populate()
         if(!obje) 
             {return res.status(404).json({message: 'No encontrado'})};
         res.json({message: 'Paciente actualizado', obje})
@@ -43,7 +43,7 @@ const update = async(req, res) =>
         res.status(500).json({message: 'Error'})
     }
 }
-//Esta es una pruba
+
 const remove = async(req, res) =>
 {
     try
