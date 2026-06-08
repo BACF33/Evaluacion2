@@ -2,16 +2,16 @@ const mongoose = require('mongoose')
 
 const equipmentSchema = new mongoose.Schema(
     {
-        equipmentName: {Type: String},
-        description: {Type: String},
-        brand: {Type: String},
-        model: {Type: String},
-        purchaseDate: {Type: Date},
-        maintenanceDate: {Type: Date},
-        location: {Type: String},
-        image: {Type: String},
-        status : {Type: String},
-        isAvailable : {Type: Boolean},
+        equipmentName: {type: String},
+        description: {type: String},
+        brand: {type: String},
+        model: {type: String},
+        purchaseDate: {type: Date},
+        maintenanceDate: {type: Date},
+        location: {type: String},
+        image: {type: String},
+        status : {type: String},
+        isAvailable : {type: Boolean},
     }, {timestamps: true});
 
 module.exports = mongoose.model('equipo', equipmentSchema)

@@ -58,4 +58,4 @@ const remove = async(req, res) =>
     }
 }
 
-module.export = {create, getAll, update, remove}
+module.exports = {create, getAll, update, remove}

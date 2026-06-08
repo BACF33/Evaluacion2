@@ -7,7 +7,7 @@ const especialidadRoutes = require('./src/routes/especialidadRoutes');
 const equipoRoutes = require('./src/routes/equipoRoutes');
 const citaRoutes = require('./src/routes/citaRoutes');
 const expedienteRoutes = require('./src/routes/expedienteRoutes');
-app.use('/api', pacienteRoutes);
+const pacienteRoutes = require('./src/routes/pacienteRoutes');
 
 const app = express();
 
